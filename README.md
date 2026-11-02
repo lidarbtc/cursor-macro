@@ -17,7 +17,7 @@ Windows용 실행 파일은 [Releases](https://github.com/lidarbtc/cursor-macro/
 ### Linux
 
 ```bash
-sudo apt install build-essential pkg-config
+sudo apt install build-essential pkg-config libxkbcommon-dev
 ```
 
 ### macOS
