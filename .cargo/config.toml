@@ -1,0 +1,3 @@
+# Windows(MSVC)에서 C 런타임까지 정적으로 링크해 exe 파일 하나만으로 실행되게 한다.
+[target.'cfg(all(windows, target_env = "msvc"))']
+rustflags = ["-C", "target-feature=+crt-static"]
