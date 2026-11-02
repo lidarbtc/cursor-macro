@@ -6,25 +6,29 @@
 > 실전에서 사용하기 전에 꼭 자신의 컴퓨터에서 클릭이 작동하는지 확인하고 그다음 사용해 주세요.
 > enigo 라이브러리 이슈로 리눅스 Wayland 환경에서는 작동 안할 수도 있습니다.
 
+## 다운로드
+
+Windows용 실행 파일은 [Releases](https://github.com/lidarbtc/cursor-macro/releases)에서 받을 수 있습니다. `weverse-macro.exe` 파일 하나로 실행되며 GTK 같은 런타임을 따로 설치할 필요가 없습니다.
+
 ## 빌드 환경 구축 방법
 
-각 운영 체제별로 필요한 라이브러리와 도구를 설치하는 방법입니다.
+[rustup](https://rustup.rs)으로 Rust를 설치한 뒤, 운영 체제별로 아래 도구를 준비합니다.
 
 ### Linux
 
 ```bash
-sudo apt install libxdo-dev libgtk-4-dev build-essential
+sudo apt install build-essential pkg-config
 ```
 
 ### macOS
 
 ```bash
-brew install gtk4
+xcode-select --install
 ```
 
 ### Windows
 
-Windows 사용자는 [GTK4 공식 문서](https://gtk-rs.org/gtk4-rs/stable/latest/book/installation_windows.html)를 참조하여 필요한 구성 요소를 설치해주세요.
+rustup 설치 중에 안내되는 Visual Studio C++ 빌드 도구만 있으면 됩니다.
 
 ## 프로그램 빌드 방법
 
@@ -34,10 +38,11 @@ Windows 사용자는 [GTK4 공식 문서](https://gtk-rs.org/gtk4-rs/stable/late
 cargo build --release
 ```
 
+Windows에서는 C 런타임까지 정적으로 링크하므로 `weverse-macro.exe` 파일 하나만 옮겨도 다른 PC에서 실행됩니다.
+
 ## 사용 방법
 
 ![사용 예시](./assets/example.png)
 
-1. 위의 지시사항에 따라 빌드 환경을 준비합니다.
-2. 프로그램을 빌드합니다.
-3. 실행 파일을 사용하여 원하는 시간에 자동 클릭을 설정합니다.
+1. 실행 파일을 다운로드하거나, 위의 지시사항에 따라 직접 빌드합니다.
+2. 실행 파일을 사용하여 원하는 시간에 자동 클릭을 설정합니다.
