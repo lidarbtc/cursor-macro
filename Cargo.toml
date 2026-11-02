@@ -5,10 +5,8 @@ edition = "2021"
 
 [dependencies]
 chrono = "0.4.41"
+eframe = "0.37.0"
 enigo = { version = "0.5.0", features = ["wayland", "libei"] }
-glib = "0.21.1"
-gtk4 = "0.10.0"
-slab = "0.4.11"
 
 [profile.release]
 strip = true
